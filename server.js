@@ -3,7 +3,9 @@
 /////////////////////////////////////////////
 require("dotenv").config() // Load ENV Variables
 const express = require("express") // import express
+const app = express();// Declares app as a instance of express;
 const morgan = require("morgan") //import morgan
+const picturesController=require(`./controllers/pictures`)
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
 const { application } = require("express")
@@ -12,6 +14,7 @@ const PORT = 4000;
 /////////////////////////////////////////////////////
 // Middleware
 /////////////////////////////////////////////////////
+app.set('view engine','ejs'); // setting view engine to ejs
 app.use(morgan("tiny")) //logging
 app.use(methodOverride("_method")) // override for put and delete requests from forms
 app.use(express.urlencoded({extended: true})) // parse urlencoded request bodies

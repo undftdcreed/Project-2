@@ -1,1 +1,14 @@
 <%- include("../views/partials/header.ejs") %>
+<h1>New post</h1>
+<form action="/pictures" method="POST">
+    <label for="caption">Caption:</label>
+    <input type="text" name="caption" id="caption">
+    <br>
+    <label for="datePosted">Date:</label>
+    <input type="text" name="datePosted" id="datePosted">
+    <br>
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" name="imageUrl" id="imageURl">
+    <br>
+    <input type="submit" value="Add new post"> 
+</form>

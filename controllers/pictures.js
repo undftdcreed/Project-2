@@ -9,7 +9,7 @@ router.get('/', (req,res) => {
 
 
 router.get('/2nds', (req,res) =>{
-    res.render('index.ejs')
+    res.render('index.ejs',{pictures})
 
 })
 router.get('/2nds/new', (req,res) =>{

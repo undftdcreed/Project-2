@@ -8,7 +8,10 @@
 <body>
     <div class="gallery">
         <% for (let i = 0; i < pictures.length; i++ ) { %>
-        <img src= <%= pictures[i].image %> alt="Different cat pictures"
+            <a href="http://localhost:4000/2nds/<%= i %>">
+        <img src= <%= pictures[i].image %> alt="Different cat pictures">
+            </a>
+         
 
        <% } %>
     

@@ -9,9 +9,9 @@ router.get('/', (req,res) => {
 
 
 router.get('/2nds', (req,res) =>{
-    res.render('index.ejs',{pictures})
-})
+    res.render('index.ejs')
 
+})
 router.get('/2nds/new', (req,res) =>{
     res.render('new.ejs')
 })

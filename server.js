@@ -24,11 +24,6 @@ app.use('/pictures',picturesController);
 ////////////////////////////////////////////
 // Routes
 ////////////////////////////////////////////
-//initial route
-app.get("/", (req, res) => {
-    res.render("home.ejs")
-})
-
 
 
 

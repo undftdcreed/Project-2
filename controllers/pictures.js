@@ -5,7 +5,7 @@ const pictures = require('../models/Pictures')
 ///Routes///
 
 router.get('', (req,res) =>{
-    res.render('index.ejs')
+    res.render('index.ejs',{pictures})
 })
 router.get('/new', (req,res) =>{
     res.render('new.ejs')

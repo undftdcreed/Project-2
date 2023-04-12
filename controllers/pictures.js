@@ -7,8 +7,10 @@ router.get('/', (req,res) => {
     res.render('home.ejs')
 })
 
+
 router.get('/2nds', (req,res) =>{
     res.render('index.ejs')
+
 })
 
 router.get('/2nds/new', (req,res) =>{

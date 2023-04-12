@@ -27,9 +27,27 @@ app.use('/pictures',picturesController);
 //initial route
 app.get("/", (req, res) => {
     res.render("home.ejs")
-})
+});
+
+//index route
+app.get('/2nds', (req, res) => {
+    res.render('index.ejs')
+});
+
+//post route
+app.get('/2nds/new', (req, res) => {
+    res.render('new.ejs')
+});
+
+//show route
+app.get('/2nds/:id', (req, res) => {
+    res.render(`show.ejs`)
+});
+
+//edit route
 
 
+//delete route
 
 
 

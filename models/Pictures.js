@@ -5,7 +5,7 @@ const pictures = [
     {
         caption: "I'm one month old today!",
         date: "April 4, 2021",
-        image: "https://drive.google.com/file/d/1M89LwyD9bG11bzdCCo_hdzNH64YTEN4E/view?usp=share_link://",
+        image: "./public/png_images/onemonthold.png",
     },
     {
         caption: "Me and Mama",

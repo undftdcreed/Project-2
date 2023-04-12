@@ -25,17 +25,21 @@ app.use('/pictures',picturesController);
 // Routes
 ////////////////////////////////////////////
 
-
-
-
-
-
-
-
+app.get('/', (req, res) => {
+    res.render('home.ejs')
+});
 
 app.get('/*', (req, res) => {
     res.render('404.ejs');
-})
+});
+
+
+
+
+
+
+
+
 //////////////////////////////////////////////
 // Server Listener
 //////////////////////////////////////////////

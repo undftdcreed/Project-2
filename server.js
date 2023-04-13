@@ -18,7 +18,7 @@ app.set('view engine','ejs'); // setting view engine to ejs
 app.use(morgan("tiny")) //logging
 app.use(methodOverride("_method")) // override for put and delete requests from forms
 app.use(express.urlencoded({extended: true})) // parse urlencoded request bodies
-app.use(express.static("public")) // serve files from public statically
+app.use(express.static("public")); // serve files from public statically
 app.use('',picturesController);
 
 ////////////////////////////////////////////

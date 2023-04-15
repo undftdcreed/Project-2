@@ -7,13 +7,14 @@
     <title>My Photos</title>
 </head>
 <body>
-    <h1>My Albums</h1>
+    <h1>My Photos</h1>
     <div class="gallery">
         <% for (let i = 0; i < pictures.length; i++ ) { %>
+            <li>
             <a href="http://localhost:4000/2nds/<%= i %>">
         <img src= <%= pictures[i].image %> alt="Different cat pictures">
             </a>
-         
+         </li>
 
        <% } %>
     

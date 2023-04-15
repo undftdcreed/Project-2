@@ -16,6 +16,9 @@ router.get('/2nds/new', (req,res) =>{
     res.render('new.ejs')
 })
 
+router.get('/profile', (req,res) =>{
+    res.render('profile.ejs')
+})
 router.get('/2nds/:id', (req,res) => {
     const singlePicture = pictures[req.params.id]
     res.render('show.ejs',{pictures:singlePicture})

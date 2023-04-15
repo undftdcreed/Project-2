@@ -19,9 +19,14 @@ router.get('/2nds/new', (req,res) =>{
 router.get('/profile', (req,res) =>{
     res.render('profile.ejs')
 })
+
 router.get('/2nds/:id', (req,res) => {
     const singlePicture = pictures[req.params.id]
     res.render('show.ejs',{pictures:singlePicture})
+})
+
+router.get('/team', (req, res) => {
+    res.render('team.ejs')
 })
 
 

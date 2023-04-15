@@ -22,7 +22,12 @@ router.get('/profile', (req,res) =>{
 
 router.get('/2nds/:id', (req,res) => {
     const singlePicture = pictures[req.params.id]
-    res.render('show.ejs',{pictures:singlePicture})
+    res.render('show.ejs',{pictures:singlePicture, idx: req.params.id})
+})
+router.get('/2nds/:id/edit', (req,res) => {
+    const imageChanges = pictures[req.params.id];
+    res.render(`edit.ejs`,{imageChanges, idx: req.params.id})
+
 })
 
 router.get('/team', (req, res) => {

@@ -66,7 +66,7 @@ const pictures = [
     {
         caption: "Just a lazy Sunday",
         date: "July 18, 2021",
-        image: "hhttps://i.postimg.cc/R0CQX4Zx/12.jpg"
+        image: "https://i.postimg.cc/R0CQX4Zx/12.jpg"
         // "https://drive.google.com/file/d/1uvgb_Irpb4VEaPIc84d0jJeXdpD4p7Xq/view?usp=share_link",
     },
     {

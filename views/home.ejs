@@ -1,4 +1,6 @@
-<!-- <%- include("../views/partials/header.ejs") %> -->
+<!-- <header>
+    <%- include("../views/partials/header.ejs") %>
+</header> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,35 +9,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <style>
-    .header{
-        text-align: center;
+    .slogan {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
     }
-
-    /* body {
-        background-color: rgba(243, 238, 240, 0.799);
-    } */
-
-    /* p {
-        font-family: verdana;
-        font-size: 18px;
-    } */
-
-    footer{
-        background-color: white
+    .login {
+        text-align: right;
     }
 </style>
+
 <body>
     <!-- <h1 class='header' >Home Page</h1> -->
-    <img src="/images/logo-no-background_720.png" width="400" alt="Seconds logo">
-    <p> Share life's precious moments
+    <img class="logo" src="/images/logo-no-background_720.png" width="400" alt="Seconds logo">
+    <p class="slogan"> Share life's precious moments
+    </p>
+    <p class="login">
+        <textarea name="Username" id="" cols="2" rows="2"></textarea>
     </p>
 </body>
 
 </html>
 
 <footer>
-<%- include("../views/partials/footer.ejs") %>
+    <%- include("../views/partials/footer.ejs") %>
 </footer>

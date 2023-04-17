@@ -13,24 +13,95 @@
 </head>
 
 <style>
-    .slogan {
-        font-size: 20px;
-        font-weight: bold;
-        text-align: left;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px;
     }
+    .logo {
+        height: 50%;
+        width: 100%;
+        text-align: center;
+        object-fit: contain;
+    }
+    .slogan {
+        font-family:"Times New Roman", Times, serif;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center; 
+        color: #535E4B;
+    }
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #111111;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: "Dongle", sans-serif;
+        text-align: center;
+    }
+    input[type=password], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #111111;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: "Dongle", sans-serif;
+        text-align: center;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #C1C2AD;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: 1px solid #111111;
+        border-radius: 4px;
+        font-family: "Dongle", sans-serif;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    input[type=submit]:hover {
+        background-color: #535E4B;
+        text-align: center;
+    }
+
     .login {
-        text-align: right;
+        border-radius: 10px;
+        background-color:#CBE1DF;
+        padding: 25px;
+        text-align: center;
     }
 </style>
 
 <body>
-    <!-- <h1 class='header' >Home Page</h1> -->
-    <img class="logo" src="/images/logo-no-background_720.png" width="400" alt="Seconds logo">
-    <p class="slogan"> Share life's precious moments
-    </p>
-    <p class="login">
-        <textarea name="Username" id="" cols="2" rows="2"></textarea>
-    </p>
+    <div class="container">
+        <div class="logo">
+            <img src="/images/logo-no-background_720.png" width="400" alt="Seconds logo">
+        </div>
+        <div class="login">
+            <form action="/profile">
+              <!-- <label for="username">Username</label> -->
+              <input type="text" id="username" name="username" placeholder="Username or email">
+              <!-- <label for="password">Password</label> -->
+              <input type="password" id="password" name="password" placeholder="Password">
+  
+              <input type="submit" value="Login">
+              <input type="submit" value="Create new account">
+            </form> 
+          </div>
+    </div>
+    <div class="slogan">
+        <h3>Share life's precious moments</h3>
+    </div>   
 </body>
 
 </html>

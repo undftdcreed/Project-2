@@ -2,6 +2,7 @@
 const mongoose=require('mongoose');
 const connectionString=process.env.MONGO_DB_URI; // String coming in from .env .
 mongoose.connect(connectionString); // Connects Mongoose to MongoDB via connectionString.
+
 mongoose.connection.on('connected', () => { 
     console.log(`[${new Date().toLocaleTimeString()}] - MongoDB connected your ready to go!! `) //Shows MongoDB connection was accomplished.
 })

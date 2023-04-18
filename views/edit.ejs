@@ -3,7 +3,7 @@
 </header>
 
 <body>
-    <form action="/pictures" method="PUT">
+    <form action="/pictures/<%= idx %>?_method=PUT" method="PUT">
         <label for="caption"> </label>
         <input type="text" name="caption" id="caption" placeholder="Change Caption">
         <br>

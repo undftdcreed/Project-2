@@ -1,22 +1,25 @@
-<%- include("../views/partials/header.ejs") %>
+<header>
+    <%- include("../views/partials/header.ejs") %>
+</header>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <img src=" <%= pictures.image %> " >
     <h2> <%= pictures.caption %> </h2>
     <h2> <%= pictures.date %> </h2>
     
         <a href="/2nds/<%= idx %>/edit"> Click to make some changes.</a>
-    
-
-    
 </body>
+
 </html>
 
-<%- include("../views/partials/footer.ejs") %>
+<footer>
+    <%- include("../views/partials/footer.ejs") %>
+</footer>

@@ -3,7 +3,7 @@ const router = express.Router();
 const pictures = require('../models/Pictures')
 
 ///Routes///
-router.get('/', (req,res) => {
+router.get('/', async (req,res) => {
     res.render('home.ejs')
 })
 

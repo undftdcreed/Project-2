@@ -22,3 +22,4 @@ https://www.figma.com/file/dUw5bqWgaL1uMwl4gYTGn9/Home-Page?node-id=0%3A1&t=CDIJ
 
 ERD model -
 https://www.figma.com/file/KzxT1wcwy3tglXObXBURqz/BSS?node-id=0%3A1&t=qmIqaellHDdEUsWL-1
+ 

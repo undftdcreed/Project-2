@@ -1,8 +1,15 @@
 <header>
     <%- include("../views/partials/header.ejs") %>
 </header>
+<body>
+<img src=" <%= deletedImage.image %> " >
+<h2> <%= deletedImage.caption %> </h2>
+<h2> <%= deletedImage.date %> </h2>
+<form method="POST" action="/pictures/<%= idx %>?_method=DELETE"> 
+        <input type="submit" value="Delete Forever">
+</form>
 
-
+</body>
 
 <footer>
     <%- include("../views/partials/footer.ejs") %>

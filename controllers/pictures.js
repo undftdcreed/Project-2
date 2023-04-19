@@ -40,6 +40,17 @@ router.put('/pictures/:id', (req,res) => {
     res.redirect(`/2nds/${req.params.id}`)
 
 })
+router.get('/2nds/:id/delete', (req,res) =>{
+    const deletedImage = pictures[req.params.id]
+    console.log(deletedImage)
+    res.render('delete.ejs', {deletedImage, idx: req.params.id})
+})
+
+router.delete('/pictures/:id', (req,res) => {
+    let deletedPicture= pictures[req.params.id];
+    pictures.splice(req.params.id, 1);
+    res.redirect(`/2nds`)
+})
 
 
 router.get('/team', (req, res) => {

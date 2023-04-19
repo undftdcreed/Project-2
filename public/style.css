@@ -20,11 +20,16 @@ div {
 }
 
 footer {
-    background-color: #D1A179;
+    background-color: #D9BCA9;
     font-family: "Dongle", sans-serif;
     /* position: sticky;  */
 }
 
 a {
     color: #535E4B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4D331F;
 }

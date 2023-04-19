@@ -24,3 +24,7 @@ footer {
     font-family: "Dongle", sans-serif;
     /* position: sticky;  */
 }
+
+a {
+    color: #535E4B;
+}

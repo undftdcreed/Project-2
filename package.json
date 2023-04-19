@@ -1,7 +1,7 @@
 {
   "name": "project-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "------------------------------------------- ICEBOX - User Stories ------------------------------------------ \"As a user, I should be able to post photos\" \"as a user, i should be able to make an updated status\" \"as a user, i should be able to like other posts\" \"as a user, i should have a user profile\" \"as a user, i should be able to browse photos\" \"i will be able to use a nav bar for all pages\" \"as a user, i should be able to create albums of photos\"",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,7 +24,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "method-override": "^3.0.0",
-    "mongoose": "^7.0.3",
+    "mongoose": "^7.0.4",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

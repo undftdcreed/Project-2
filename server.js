@@ -9,7 +9,7 @@ const picturesController=require(`./controllers/pictures`)
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
 const { application } = require("express")
-const PORT = 4000;
+const PORT = process.env.port || 4000;
 
 /////////////////////////////////////////////////////
 // Middleware
@@ -28,6 +28,10 @@ app.use('',picturesController);
 app.get('/', (req, res) => {
     res.render('home.ejs')
 });
+
+app.get('/dburl', (req, res) => {
+    response.send(`My connection string is: ${process.env.DATABASE_URL}`)
+})
 
 app.get('/*', (req, res) => {
     res.render('404.ejs');

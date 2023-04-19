@@ -7,46 +7,45 @@
     <title>2nds</title>
 </head>
 
-<style>
-    .photos-link,
+<!-- <style> -->
+    <!-- .photos-link,
     .home-link,
-    /* .component-5, */
     .profile-link,
     .team-link,
     .new-photo-link{
-        text-align: end;
-        align-items: flex-end;
-        font-size: small;
-    }
+        /* text-align: end; */
+        /* align-items: flex-end; */
+        font-size: 10px;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: o;
+        padding: 0;
+    } -->
 
-    .photos-link :hover {
+    <!-- .photos-link :hover {
         transform: rotate(15deg);
     }
 
     .home-link :hover {
         transform: rotate(15deg);
     }
-    
-    .component-5 :hover {
-        transform: rotate(15deg);
-    }
 
     .profile-link :hover {
         transform: rotate(15deg);
-    }
+    } -->
 
-    .your-logo {
+    <!-- .your-logo {
         width: 30%;
         height: 20%;
         object-fit: contain;
         align: left;
-    }
+    } -->
 
+<!-- </style> -->
 
-</style>
-
-<body>
-    <div class="frame-1 screen">
+<!-- <body> -->
+    <!-- <div class="frame-1 screen">
         <img class="your-logo" src="https://i.postimg.cc/Jz0KqvDT/logo-no-background.png" />
         <h1 class="home-link"><a href="/">Home</a></h1>
         <h1 class="profile-link inter-medium-mine-shaft-20px"><a href="/profile">Profile</a></h1>
@@ -56,4 +55,54 @@
     <hr>
 </body>
 
-</html>
+</html> -->
+
+<body>
+    <div class="header-wrapper">
+    <img class="header-logo" src="https://i.postimg.cc/Jz0KqvDT/logo-no-background.png" alt="2NDS brand logo">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/profile">My Profile</a></li>
+        <li><a href="/2nds">My Photos</a></li>
+        <li><a href="/2nds/new">Add a new photo!</a></li>
+      </ul>
+    </nav>
+    </div>
+</body>
+  
+  <style>
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav li {
+      margin: 0 10px;
+    }
+
+    .header-logo {
+        width: 10%;
+        height: auto;
+        object-fit: contain;
+        align: left;
+    }
+    </style>
+  </html>

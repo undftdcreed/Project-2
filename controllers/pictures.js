@@ -37,7 +37,7 @@ router.get('/2nds/:id/edit', (req,res) => {
 router.put('/pictures/:id', (req,res) => {
     const imageEdit=req.body;
     pictures[req.params.id]=imageEdit;
-    res.redirect('/2nds')
+    res.redirect(`/2nds/${req.params.id}`)
 
 })
 

@@ -13,13 +13,56 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <style>
-    .header{
-        text-align: center;
-    }
+  body {
+			background:#eee;
+		}
+		html,
+		body,
+		.view {
+			height:100%;
+		}
+		.navbar-brand {
+			color:#fff !important;
+		}
+		.profile-photo {
+			width:48px;
+			height:auto;
+		}
+		.flex-menu {
+			display:flex;
+		}
+		.flex-menu li:not(:last-child) {
+			margin-right:40px;
+		}
+        .col-md-2 {
+            width: 10%;
+            height: auto;
+            justify-content: left;
+        }
 </style>
 <body>
-    <h1 class='header' >Profile Page </h1> 
-    
+    <main>
+		<div class="container">
+			<div class="row m-b-r m-t-3">
+				<div class="col-md-2 offset-md-1">
+					<img src="https://pbs.twimg.com/media/C7dtIWsVsAA3wdJ.jpg" alt="" class="img-circle img-fluid">
+				</div>
+				<div class="col-md-9 p-t-2">
+					<h2 class="h2-responsive">@dougdimmadome<button type="button" class="btn btn-info-outline waves-effect">Follow</button></h2>
+					<p>Doug Dimmadome</p>
+					<ul class="flex-menu">
+						<li><strong>41</strong> posts</li>
+						<li><strong>47k</strong> followers</li>
+						<li><strong>208</strong> following</li>
+					</ul>
+                    <h3>HI!! IM DOUG DIMMADOME!! OWNER OF THE DIMMSDALE DIMMADOME!!</h3>
+                    <h3>Billionaire, real-estate tycoon, and dee-stroyer of cherished childhood dreams! LIKE YOURS!</h3>
+				</div>
+			</div>
+		
+			
+			
+	</main>
 </body>
 
 </html>

@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: #535E4B;
 }
 
 div {
@@ -21,4 +22,9 @@ div {
 footer {
     background-color: #D1A179;
     font-family: "Dongle", sans-serif;
+    /* position: sticky;  */
+}
+
+a {
+    color: #535E4B;
 }

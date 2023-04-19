@@ -2,7 +2,16 @@
     <%- include("../views/partials/header.ejs") %>
 </header>
 
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<style>
+
+</style>
+
 <body>
+    <h1>Edit Post</h1>
     <form method="POST" action="/pictures/<%= idx %>?_method=PUT"> 
         <label for="caption"></label>
         <input type="text" name="caption" id="caption" placeholder="Edit Caption Here">

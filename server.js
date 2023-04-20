@@ -9,7 +9,7 @@ const picturesController=require(`./controllers/pictures`)
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
 const { application } = require("express")
-const PORT = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 /////////////////////////////////////////////////////
 // Middleware

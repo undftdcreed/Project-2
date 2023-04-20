@@ -25,7 +25,7 @@ const picturesSchema = new mongoose.Schema(
     }
 );
 
-const Pictures = mongoose.model('2nds', picturesSchema);
+const Pictures = mongoose.model('Photos', picturesSchema);
 
 // const pictures = [
 //     {

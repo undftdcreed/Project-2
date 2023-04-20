@@ -10,10 +10,10 @@
 
 <body>
     <h1>ARE YOU SURE YOU WANT TO DELETE?!?!?!?!?</h1>
-<img src=" <%= deletedImage.image %> " >
-<h2> <%= deletedImage.caption %> </h2>
-<h2> <%= deletedImage.date %> </h2>
-<form method="POST" action="/pictures/<%= idx %>?_method=DELETE"> 
+<img src=" <%= pictures.image %> " >
+<h2> <%= pictures.caption %> </h2>
+<h2> <%= pictures.date %> </h2>
+<form method="POST" action="/pictures/<%= pictures._id %>?_method=DELETE"> 
         <input type="submit" value="Delete Forever">
 </form>
 

@@ -11,7 +11,7 @@ const picturesSchema = new mongoose.Schema(
         },
         date: {
             type: String,
-            required: [true,"You need o add your post date" ]
+            required: [true,"You need to add your post date" ]
         },
         image:{
             type: String,

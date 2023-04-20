@@ -3,59 +3,99 @@ const router = express.Router();
 const pictures = require('../models/Pictures')
 
 ///Routes///
-router.get('/', async (req,res) => {
+router.get('/', (req,res) => {
     res.render('home.ejs')
 })
 
 
-router.get('/2nds', (req,res) =>{
-    res.render('index.ejs',{pictures})
+router.get('/2nds', async (req, res, next ) =>{
+    try{
+     const myGallery = await pictures.find({});
+     console.log(myGallery);
+    res.render('index.ejs',{pictures: myGallery})
+    } catch(err){
+        console.log(err);
+        next();
+    }
+});
 
-})
 router.get('/2nds/new', (req,res) =>{
     res.render('new.ejs')
 })
 
 router.get('/profile', (req,res) =>{
     res.render('profile.ejs')
-})
+});
 
-router.get('/2nds/:id', (req,res) => {
-    const singlePicture = pictures[req.params.id]
-    res.render('show.ejs',{pictures:singlePicture, idx: req.params.id})
-})
-router.post('/pictures', (req, res)=>{
-    pictures.push(req.body);
-    console.log(req.body);
-    res.redirect('/2nds');
-})
-router.get('/2nds/:id/edit', (req,res) => {
-    const imageChanges = pictures[req.params.id];
-    res.render(`edit.ejs`,{imageChanges, idx: req.params.id})
+router.get('/2nds/:id', async (req,res, next) => {
+    try{
+        const singlePicture = await pictures.findById(req.params.id);
+        res.render('show.ejs',{pictures: singlePicture})
+    }catch(err){
+        console.log(err)
+    }
+});
 
-})
-router.put('/pictures/:id', (req,res) => {
-    const imageEdit=req.body;
-    pictures[req.params.id]=imageEdit;
-    res.redirect(`/2nds/${req.params.id}`)
+router.post('/pictures', async (req, res, next)=>{
+    try{
+        const addedImage = await pictures.create(req.body);
+        console.log(addedImage)
+        res.redirect('/2nds');
+    }catch(err){
+        console.log(err);
+        next();
 
-})
-router.get('/2nds/:id/delete', (req,res) =>{
-    const deletedImage = pictures[req.params.id]
-    console.log(deletedImage)
-    res.render('delete.ejs', {deletedImage, idx: req.params.id})
-})
+    }
+});
 
-router.delete('/pictures/:id', (req,res) => {
-    let deletedPicture= pictures[req.params.id];
-    pictures.splice(req.params.id, 1);
-    res.redirect(`/2nds`)
-})
+router.get('/2nds/:id/edit', async (req, res, next) => {
+    try{
+        const imageChanges = await pictures.findById(req.params.id);
+        res.render(`edit.ejs`,{pictures: imageChanges});
+    }catch(err){
+        console.log(err);
+        next()
+
+    }
+});
+
+
+
+router.put('/pictures/:id', async (req, res, next) => {
+    try{
+        const imageEdit=req.body;
+        const editedImage = await pictures.findByIdAndUpdate(req.params.id)
+        res.redirect(`/2nds/${req.params.id}`)
+
+    }catch(err){
+        console.log(err);
+    }
+
+});
+
+router.get('/2nds/:id/delete', async (req, res, next) =>{
+    try{
+        const imageToDelete = await pictures.findById(req.params.id);
+        res.render('delete.ejs', {pictures: imageToDelete})
+    } catch(err){
+        console.log(err)
+        next();
+    }
+});
+
+router.delete('/pictures/:id', async  (req,res) => {
+    try{
+       const deletedImage = await pictures.findByIdAndDelete(req.params.id);
+        res.redirect(`/2nds`)
+    } catch(err){
+        console.log(err)
+    }
+});
 
 
 router.get('/team', (req, res) => {
     res.render('team.ejs')
-})
+});
 
 
 

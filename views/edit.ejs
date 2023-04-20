@@ -12,6 +12,7 @@
 
 <body>
     <h1>Edit Post</h1>
+    <div>
     <form method="POST" action="/pictures/<%= idx %>?_method=PUT"> 
         <label for="caption"></label>
         <input type="text" name="caption" id="caption" placeholder="Edit Caption Here">
@@ -24,6 +25,7 @@
         <br>
         <input type="submit" value="Submit Changes"> 
     </form>
+    </div>
 </body>
    
 <footer>

@@ -7,7 +7,35 @@
 </head>
 
 <style>
-
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #111111;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: "Dongle", sans-serif;
+        text-align: center;
+        font-size: 20px;
+    }
+    input[type=submit] {
+        width: 100%;
+        background-color: #C1C2AD;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: 1px solid #111111;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        font-family: "Dongle", sans-serif;
+        font-size: 20px;
+    }
+    input[type=submit]:hover {
+        background-color: #535E4B;
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -15,7 +43,7 @@
     <div>
     <form method="POST" action="/pictures/<%= idx %>?_method=PUT"> 
         <label for="caption"></label>
-        <input type="text" name="caption" id="caption" placeholder="Edit Caption Here">
+        <input type="text" name="caption" id="caption" placeholder="Edit Caption Here" size="50">
         <br>
         <label for="date"></label>
         <input type="text" name="date" id="date" placeholder="Edit Date Here">

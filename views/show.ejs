@@ -1,3 +1,5 @@
+
+
 <header>
     <%- include("../views/partials/header.ejs") %>
 </header>
@@ -12,18 +14,28 @@
 
 <style>
     .white-box {
-    		background-color: white; 
-		}
+    	background-color: white; 
+        text-align: center;
+        width: 100%;
+	}
+    .edit-delete a {
+        margin: 10px;
+    }
+
 </style>
 
 <body>
+    <div>
     <img src=" <%= pictures.image %> " >
     <div class="white-box">
     <h2> <%= pictures.caption %> </h2>
     <h2> <%= pictures.date %> </h2>
-    </div>  
-        <a href="/2nds/<%= pictures._id %>/edit"> Click to make some changes.</a>
-        <a href="/2nds/<%= pictures._id %>/delete"> Click to delete post.</a>
+    </div>
+    </div> 
+    <div class="edit-delete"> 
+        <a href="/2nds/<%= pictures._id %>/edit"> ✏️ </a>
+        <a href="/2nds/<%= pictures._id %>/delete"> 🗑️</a>
+    </div>
 </body>
 
 </html>

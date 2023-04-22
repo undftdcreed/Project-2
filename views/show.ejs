@@ -28,13 +28,14 @@
     <div>
     <img src=" <%= pictures.image %> " >
     <div class="white-box">
-    <h2> <%= pictures.caption %> </h2>
     <h2> <%= pictures.date %> </h2>
+    <h2> <%= pictures.caption %> </h2>
     </div>
     </div> 
     <div class="edit-delete"> 
         <a href="/2nds/<%= pictures._id %>/edit"> ✏️ </a>
         <a href="/2nds/<%= pictures._id %>/delete"> 🗑️</a>
+        <a href="/2nds"><button type="button" class="btn btn-info-outline waves-effect">Back to photos</button></a>
     </div>
 </body>
 

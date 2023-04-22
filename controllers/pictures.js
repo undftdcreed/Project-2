@@ -190,7 +190,7 @@ const picturesSeed = [
 
 router.get('/seed', async (req, res, next) => {
     try{
-        await pictures.insertMany(picturesSeed)
+        await Pictures.insertMany(picturesSeed)
         res.redirect('/2nds')
     } 
     catch(error) {
